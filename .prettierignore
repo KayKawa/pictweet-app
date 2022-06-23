@@ -3,8 +3,3 @@ build
 coverage
 package.json
 package-lock.json
-testEslint/
-testProject/
-testTslint/
-testWorkspaceFolder/
-config/database.yml
