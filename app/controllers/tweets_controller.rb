@@ -18,6 +18,16 @@ class TweetsController < ApplicationController
     render :destroy,status: :see_other
   end
 
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def update
+    tweet = Tweet.find(params[:id])
+    tweet.update(tweet_params)
+    render :update,status: :created
+  end
+
 
   private
 
