@@ -12,6 +12,13 @@ class TweetsController < ApplicationController
     render :create, status: :created
   end
 
+  def destroy
+    tweet =Tweet.find(params[:id])
+    tweet.destroy
+    render :destroy,status: :see_other
+  end
+
+
   private
 
   def tweet_params
